@@ -75,29 +75,44 @@ imgAll[0].src = 'http://localhost:9000/img/logo.png'
 imgAll[1].src = 'http://localhost:9000/img/cta.png'
 imgAll[2].src = 'http://localhost:9000/img/accent.png'
 
-// All Headers
+// All Headers/paragraphs
 const heading1 = document.getElementsByTagName('h1');
 heading1.textContent = 'DOM Is Awesome';
 
+// Holders
+const words = document.getElementsByTagName('p');
+const headings = document.getElementsByTagName('h4');
+
+
 // Heading function
 const headingFixer = array => {
-  const headings = document.getElementsByTagName('h4');
-  headings[0].textContent = array.features-h4;
-  headings[1].textContent = array.about-h4;
-  headings[2].textContent = array.services-h4;
-  headings[3].textContent = array.product-h4;
-  headings[4].textContent = array.vision-h4;
+  headings[0].textContent = array['main-content']['features-h4'];
+  headings[1].textContent = array['main-content']['about-h4'];
+  headings[2].textContent = array['main-content']['services-h4'];
+  headings[3].textContent = array['main-content']['product-h4'];
+  headings[4].textContent = array['main-content']['vision-h4'];
 
-  const words = document.getElementsByTagName('p');
-  words[0].textContent = array.features-content;
-  words[1].textContent = array.about-content;
-  words[2].textContent = array.services-content;
-  words[3].textContent = array.product-content;
-  words[4].textContent = array.vision-content;
+  words[0].textContent = array['main-content']['features-content'];
+  words[1].textContent = array['main-content']['about-content'];
+  words[2].textContent = array['main-content']['services-content'];
+  words[3].textContent = array['main-content']['product-content'];
+  words[4].textContent = array['main-content']['vision-content'];
+}
+headingFixer(siteContent);
 
-  
+// Contact Words
+const contactStuff = array => {
+  headings[5].textContent = array['contact']['contact-h4']
 
+  words[5].textContent = array['contact']['address'];
+  words[6].textContent = array['contact']['phone'];
+  words[7].textContent = array['contact']['email'];
 }
 
+contactStuff(siteContent);
+
+// Button
+const buttonThing = document.getElementsByTagName('button');
+buttonThing.textContent = 'Get Started';
 
 console.log('project wired!')
