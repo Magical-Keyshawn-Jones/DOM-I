@@ -76,12 +76,19 @@ imgAll[1].src = 'http://localhost:9000/img/cta.png'
 imgAll[2].src = 'http://localhost:9000/img/accent.png'
 
 // All Headers/paragraphs
-const heading1 = document.getElementsByTagName('h1');
-heading1.textContent = 'DOM Is Awesome';
+
+
+// Button
+const buttonThing = document.getElementsByTagName('button');
+buttonThing[0].textContent = 'Get Started';
+
 
 // Holders
 const words = document.getElementsByTagName('p');
 const headings = document.getElementsByTagName('h4');
+
+const heading1 = document.getElementsByTagName('h1');
+heading1[0].textContent = 'DOM Is Awesome';
 
 
 // Heading function
@@ -110,9 +117,5 @@ const contactStuff = array => {
 }
 
 contactStuff(siteContent);
-
-// Button
-const buttonThing = document.getElementsByTagName('button');
-buttonThing.textContent = 'Get Started';
 
 console.log('project wired!')
