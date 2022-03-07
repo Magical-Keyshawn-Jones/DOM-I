@@ -39,4 +39,65 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+// All Navs
+
+const headerNav = document.querySelectorAll('a');
+
+// Adding Nav Class
+const classAdder = array => {
+  for (let a = 0; a < array.length-1; a++) {
+    array[a].classList.add('italic')
+  }
+};
+
+classAdder(headerNav);
+headerNav[6].classList.add('bold');
+
+// Adding Nav Text
+headerNav[0].textContent= 'Services'
+headerNav[1].textContent= 'Product'
+headerNav[2].textContent= 'Vision'
+headerNav[3].textContent= 'Features'
+headerNav[4].textContent= 'About'
+headerNav[5].textContent= 'Contact'
+headerNav[6].textContent= 'Copyright Great Idea! 2021'
+
+// All img
+const imgAll = document.querySelectorAll('img');
+
+// Adding Id
+imgAll[0].id = 'logo-img'
+imgAll[1].id = 'cta-img'
+imgAll[2].id = 'middle-img'
+
+// Adding Url
+imgAll[0].src = 'http://localhost:9000/img/logo.png'
+imgAll[1].src = 'http://localhost:9000/img/cta.png'
+imgAll[2].src = 'http://localhost:9000/img/accent.png'
+
+// All Headers
+const heading1 = document.getElementsByTagName('h1');
+heading1.textContent = 'DOM Is Awesome';
+
+// Heading function
+const headingFixer = array => {
+  const headings = document.getElementsByTagName('h4');
+  headings[0].textContent = array.features-h4;
+  headings[1].textContent = array.about-h4;
+  headings[2].textContent = array.services-h4;
+  headings[3].textContent = array.product-h4;
+  headings[4].textContent = array.vision-h4;
+
+  const words = document.getElementsByTagName('p');
+  words[0].textContent = array.features-content;
+  words[1].textContent = array.about-content;
+  words[2].textContent = array.services-content;
+  words[3].textContent = array.product-content;
+  words[4].textContent = array.vision-content;
+
+  
+
+}
+
+
 console.log('project wired!')
